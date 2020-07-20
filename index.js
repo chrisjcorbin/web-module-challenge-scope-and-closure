@@ -56,11 +56,12 @@ function counter2() {
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
-
+function inning(){
+  let points = Math.floor(Math.random() * 3);
+  return points;
 }
+
+console.log(inning());
 
 /* Task 3: finalScore()
 
@@ -76,11 +77,19 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(runs, num){
+  let final = {
+  'Home': 0, 
+  'Away': 0,
+  }
+  for (let i = 0; i < num; i++){
+    final.Home += runs();
+    final.Away += runs();
+  }
+  return final;
 }
+
+console.log(finalScore(inning, 9));
 
 /* Task 4: 
 
@@ -102,9 +111,25 @@ and returns the score at each pont in the game, like so:
 9th inning: awayTeam - homeTeam
 Final Score: awayTeam - homeTeam */
 
-
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(getInningScore, num) {
+  let finalRuns = {
+  'Home': 0,
+  'Away': 0,
+  }
+  for (let i = 0; i < num; i++) {
+    finalRuns.Home = finalRuns.Home + getInningScore();
+    finalRuns.Away = finalRuns.Away + getInningScore();
+    if (i===0){
+      console.log(`${i+1}st inning: ${finalRuns.Away}-${finalRuns.Home}`);
+    }else if(i===1){
+      console.log(`${i+1}nd inning: ${finalRuns.Away}-${finalRuns.Home}`);
+    }else if(i===2){
+      console.log(`${i+1}rd inning: ${finalRuns.Away}-${finalRuns.Home}`);
+    }else{
+      console.log(`${i+1}th inning: ${finalRuns.Away}-${finalRuns.Home}`);
+    }
+  }
+  return (`Final Score : ${finalRuns.Away} - ${finalRuns.Home}`);
 }
 
-
+console.log(scoreboard(inning, 9));

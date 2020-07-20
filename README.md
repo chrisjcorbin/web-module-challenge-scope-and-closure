@@ -42,6 +42,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closure can be thought of as a form of data privacy. It is a good idea to practice and enforce closure if you need to protect the data of the variables that are delcared in your function. It will also make sure you have cleaner code as those variables will only be accessible inside of each function you need and declare them.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +66,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+Closure is due to name being defined a second time but "closed off" due to the calling of the function twice.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+The name shown which is Dan is always the same. The number shown next to Dan will change most of the time as it is randomized.
+
 c. What is the lexical scope of `newRoll`? 
+
+newRoll is able to be accessed from within its parent and child functions. However, not accessible outside.
 
 ### Task 2c - Exit Ticket
 

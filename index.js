@@ -28,10 +28,18 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * counter1 is showing the count variable inside of counterMaker. This means, it will only be available locally and not be accessible outside of the function.
+ * counter2 is showing the count variable outside of counterMaker. This means, it will be accessible inside and outside and so be considered global. 
+ * 
  * 2. Which of the two uses a closure? How can you tell?
+ * 
+ * counter1 uses a closure. You can tell because it has the variable declared inside of the function.
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
+ * counter1 would be preferrable most of the time as it maintains data privacy by making the variable(s) declared inside of the function only accessible therein.
+ * 
+ * counter2 would be ideal if you need access to a variable outside of a function. Although, is not recommended or preferred in most cases.
 */
 
 // counter1 code

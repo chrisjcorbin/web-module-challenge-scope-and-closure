@@ -137,7 +137,7 @@ function scoreboard(getInningScore, num) {
       console.log(`${i+1}th inning: ${finalRuns.Away}-${finalRuns.Home}`);
     }
   }
-  return (`Final Score : ${finalRuns.Away} - ${finalRuns.Home}`);
+  return `Final Score : ${finalRuns.Away} - ${finalRuns.Home}`;
 }
 
 console.log(scoreboard(inning, 9));
